@@ -7,7 +7,7 @@ body {
 
 .brikke
 {
-    padding:1em; border: .15em black solid; height: 100px; width: 100px; float:left;
+    padding:0.3em; border: .15em black solid; height: 100px; width: 100px; float:left;
 }
 .brikke img
 {
@@ -16,11 +16,11 @@ body {
 }
 .brett
 {
-    border:.15em black solid;
+    width: 100%;
 }
 .rad
 {
- float:left; clear:both; padding-left: 50em;
+ float:left; clear:both; margin-left: 40%; min-width: 320px;
 }
 .overskrift
 {

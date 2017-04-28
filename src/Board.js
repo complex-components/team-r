@@ -10,14 +10,15 @@ class Board extends Component {
     render() {
 
         const boardStyle = {
-            width: '100%'
+                display: '-webkit-flex',
+                display: 'inline',
+                flexWrap:'nowrap'
         }
 
         const radStyle = {
-            float:'left',
-            clear:'both',
+           height:'100px',
             marginLeft:'40%',
-            minWidth:'320px' 
+            width:'400px'
         }
 
         return (

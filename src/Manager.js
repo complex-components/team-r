@@ -51,14 +51,49 @@ class Manager extends React.Component {
         };
     }
 
+    getwinner(board){
+        //console.log(board[0]);
+
+        if (board[0] === board[1] === board[2] && (board[0] !== this.props.nuke)){
+            console.log("a");
+            return board[0];
+        } else if (board[3] === board[4] === board[5] && board[3] !== this.props.nuke){
+            return board[3];
+        } else if (board[6] === board[7] === board[8] && board[6] !== this.props.nuke){
+            return board[6];
+        } else if (board[0] === board[3] === board[6] && board[0] !== this.props.nuke){
+            return board[0];
+        } else if (board[1] === board[4] === board[7] && board[1] !== this.props.nuke){
+            return board[1];
+        } else if (board[2] === board[5] === board[8] && board[2] !== this.props.nuke){
+            return board[2];
+        } else if (board[0] === board[4] === board[8] && board[0] !== this.props.nuke){
+            return board[0];
+        } else if (board[2] === board[4] === board[6] && board[2] !== this.props.nuke){
+            return board[2];
+        } else {
+            return null;
+        }
+    }
+
     click(i){
         console.log("clocked:" + i);
         const newBoard = this.state.blocks;
+
 
         if(this.state.trumpTurn === true){
             newBoard[i] = this.props.trump;
         } else {
             newBoard[i] = this.props.kim;
+        }
+
+        const winner = this.getwinner(newBoard);
+        if(winner !== null){
+            if (winner == this.props.trump){
+                console.log("trump won");
+            } else {
+                console.log("kim won");
+            }
         }
 
         this.setState({
@@ -68,7 +103,6 @@ class Manager extends React.Component {
     }
 
     render(){
-
 
         return(
             <div>

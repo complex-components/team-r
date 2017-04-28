@@ -47,7 +47,7 @@ class Manager extends React.Component {
         super(props);
         this.state = {
             blocks: Array(9).fill(props.nuke),
-            isPlayer1Turn: true,
+            trumpTurn: true,
         };
     }
 
@@ -55,7 +55,7 @@ class Manager extends React.Component {
         console.log("clocked:" + i);
         const newBoard = this.state.blocks;
 
-        if(this.state.isPlayer1Turn === true){
+        if(this.state.trumpTurn === true){
             newBoard[i] = this.props.trump;
         } else {
             newBoard[i] = this.props.kim;
@@ -63,7 +63,7 @@ class Manager extends React.Component {
 
         this.setState({
             blocks: newBoard,
-            isPlayer1Turn: !this.state.isPlayer1Turn,
+            trumpTurn: !this.state.trumpTurn,
         });
     }
 

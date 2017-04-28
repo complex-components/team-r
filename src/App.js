@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FantasticComponent from './fantastic-component'
+import Block from './Block'
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +12,9 @@ class App extends Component {
           <h2>Team R!</h2>
         </div>
         <div className="component-test">
-          <FantasticComponent />
+            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
+            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
+            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
         </div>
       </div>
     );

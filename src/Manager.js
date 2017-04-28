@@ -5,8 +5,8 @@ import React, { Component } from 'react';
 class Block extends React.Component {
     render() {
         return (
-            <div>
-                <img className="brikke" onClick={() => this.props.onClick()} src={this.props.value}/>
+            <div className="brikke">
+                <img  onClick={() => this.props.onClick()} src={this.props.value}/>
             </div>
         );
     }
@@ -20,6 +20,7 @@ class Board extends React.Component {
     }
     render() {
         return (
+
             <div className="brett">
                 <div className="rad">
                     {this.drawBlock(0)}

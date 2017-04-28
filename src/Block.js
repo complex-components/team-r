@@ -1,6 +1,3 @@
-/**
- * Created by pederthorup on 28/04/2017.
- */
 
 import React, { Component } from 'react';
 
@@ -8,7 +5,7 @@ class Block extends Component {
     render() {
         return (
             <div className="brikke">
-                <img src={this.props.image} />
+                <img alt="derp" onClick={() => this.props.onClick()} src={this.props.value}/>
             </div>
         );
     }

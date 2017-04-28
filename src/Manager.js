@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 class Block extends React.Component {
     render() {
         return (
-            <button className="square" onClick={() => this.props.onClick()}>
-                {this.props.value}
-            </button>
+            <div>
+                <img className="brikke" onClick={() => this.props.onClick()} src={this.props.value}/>
+            </div>
         );
     }
 }
@@ -20,18 +20,18 @@ class Board extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div className="board-row">
+            <div className="brett">
+                <div className="rad">
                     {this.drawBlock(0)}
                     {this.drawBlock(1)}
                     {this.drawBlock(2)}
                 </div>
-                <div className="board-row">
+                <div className="rad">
                     {this.drawBlock(3)}
                     {this.drawBlock(4)}
                     {this.drawBlock(5)}
                 </div>
-                <div className="board-row">
+                <div className="rad">
                     {this.drawBlock(6)}
                     {this.drawBlock(7)}
                     {this.drawBlock(8)}
@@ -52,13 +52,13 @@ class Manager extends React.Component {
     }
 
     click(i){
-
+        console.log("clocked:" + i);
         const newBoard = this.state.blocks;
 
         if(this.state.isPlayer1Turn === true){
-            newBoard[i] = "x";
+            newBoard[i] = this.prop.trump;
         } else {
-            newBoard[i] = "o";
+            newBoard[i] = this.prop.kim;
         }
 
         this.setState({

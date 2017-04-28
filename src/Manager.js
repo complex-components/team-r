@@ -43,10 +43,10 @@ class Board extends React.Component {
 
 
 class Manager extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            blocks: Array(9).fill(null),
+            blocks: Array(9).fill(props.nuke),
             isPlayer1Turn: true,
         };
     }
@@ -56,9 +56,9 @@ class Manager extends React.Component {
         const newBoard = this.state.blocks;
 
         if(this.state.isPlayer1Turn === true){
-            newBoard[i] = this.prop.trump;
+            newBoard[i] = this.props.trump;
         } else {
-            newBoard[i] = this.prop.kim;
+            newBoard[i] = this.props.kim;
         }
 
         this.setState({

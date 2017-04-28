@@ -6,9 +6,9 @@ import './App.css';
 class App extends Component {
 
   render() {
-    const t = require('./trump.jpg');
-    const k = require('./kimjong.jpg');
-    const n = require('./nuke.jpg');
+    const t = require('./images/trump.jpg');
+    const k = require('./images/kimjong.jpg');
+    const n = require('./images/nuke.jpg');
 
     return (
       <div className="App">

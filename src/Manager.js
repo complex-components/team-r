@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import Board from './Board';
 
-
 class Manager extends Component {
     constructor(props) {
         super(props);
@@ -15,8 +14,6 @@ class Manager extends Component {
     }
 
     getwinner(board){
-        //console.log(board[0]);
-
         if (board[0] === board[1] && board[2] === board[0] && board[1] === board[2]){
             console.log("a");
             return board[0];
@@ -48,27 +45,29 @@ class Manager extends Component {
         });
     }
 
-    click(i){
+    click(index){
 
         if(this.state.gameover === true){
             this.newgame();
             return;
         } else {
-            if(this.state.blocks[i] !== this.props.nuke){
+            if(this.state.blocks[index] !== this.props.nuke){
                 return;
             }
         }
 
-        console.log("clocked:" + i);
+        console.log("clocked:" + index);
         const newBoard = this.state.blocks;
 
 
+        //Draw square with player picture.
         if(this.state.trumpTurn === true){
-            newBoard[i] = this.props.trump;
+            newBoard[index] = this.props.trump;
         } else {
-            newBoard[i] = this.props.kim;
+            newBoard[index] = this.props.kim;
         }
 
+        //See if there is a winner
         const winner = this.getwinner(newBoard);
         if(winner !== null){
 
@@ -89,6 +88,7 @@ class Manager extends Component {
             }
         }
 
+        //Store changes to state
         this.setState({
             blocks: newBoard,
             trumpTurn: !this.state.trumpTurn,
@@ -99,19 +99,18 @@ class Manager extends Component {
         const overskriftStyle = {
             font: '1.5em verdana',
             margin: '2em'
-        }
+        };
 
         return(
             <div>
                 <div style={overskriftStyle}>{this.state.overskrift}</div>
                 <Board
                 blocks={this.state.blocks}
-                onClick={(i) => this.click(i)}
+                onClick={(index) => this.click(index)}
                 />
             </div>
         );
     }
-
 }
 
 export default Manager;

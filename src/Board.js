@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import Block from './Block';
 
 class Board extends Component {
-    drawBlock(i) {
+    drawBlock(index) {
         const blocks = this.props.blocks;
-        return <Block value={blocks[i]} onClick={() => this.props.onClick(i)} />;
+        return <Block value={blocks[index]} onClick={() => this.props.onClick(index)} />;
     }
     render() {
 

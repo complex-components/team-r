@@ -1,3 +1,7 @@
+# INSTALL
+
+## npm install kim-trump-tic-tac-toe
+
 # Team-R
 
 This project was bootstrapped with [Create React App](https://github.com/complex-components/team-r/blob/master/RCA_README.md)

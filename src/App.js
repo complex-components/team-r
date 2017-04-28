@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Team R!</h1>
         </div>
-        
+
          <div className="overskrift">Dagsaktuell 3 på rad</div>
         <Manager trump={t} kim={k} nuke={n}/>
       </div>

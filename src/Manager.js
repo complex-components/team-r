@@ -80,19 +80,21 @@ class Manager extends React.Component {
 
     newgame(){
         this.setState({
-            blocks: Array(9).fill(props.nuke),
+            blocks: Array(9).fill(this.props.nuke),
             trumpTurn: true,
             gameover: false,
         });
     }
 
     click(i){
-        if(this.state.blocks[i] !== this.props.nuke){
-            return;
+
+
+        if(this.state.gameover === true){
+            this.newgame();
         }
 
-        if(gameover === true){
-            this.newgame();
+        if(this.state.blocks[i] !== this.props.nuke){
+            return;
         }
 
         console.log("clocked:" + i);
@@ -109,7 +111,13 @@ class Manager extends React.Component {
         if(winner !== null){
             if (winner === this.props.trump){
                 console.log("trump won");
+                this.setState({
+                    gameover: true,
+                });
             } else if (winner === this.props.kim) {
+                this.setState({
+                    gameover: true,
+                });
                 console.log("kim won");
             }else {
                 console.log("no winner yet")

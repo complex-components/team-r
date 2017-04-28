@@ -56,9 +56,9 @@ class Manager extends React.Component {
         const newBoard = this.state.blocks;
 
         if(this.state.isPlayer1Turn === true){
-            newBoard[i] = this.prop.trump;
+            newBoard[i] = this.props.trump;
         } else {
-            newBoard[i] = this.prop.kim;
+            newBoard[i] = this.props.kim;
         }
 
         this.setState({

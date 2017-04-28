@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Block from './Block'
+import Manager from './Manager'
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,11 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Team R!</h1>
         </div>
-        <div className="component-test">
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
-        </div>
+        <Manager/>
       </div>
     );
   }

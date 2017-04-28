@@ -49,6 +49,7 @@ class Manager extends React.Component {
         this.state = {
             blocks: Array(9).fill(props.nuke),
             trumpTurn: true,
+            gameover: false,
         };
     }
 
@@ -77,7 +78,23 @@ class Manager extends React.Component {
         }
     }
 
+    newgame(){
+        this.setState({
+            blocks: Array(9).fill(props.nuke),
+            trumpTurn: true,
+            gameover: false,
+        });
+    }
+
     click(i){
+        if(this.state.blocks[i] !== this.props.nuke){
+            return;
+        }
+
+        if(gameover === true){
+            this.newgame();
+        }
+
         console.log("clocked:" + i);
         const newBoard = this.state.blocks;
 

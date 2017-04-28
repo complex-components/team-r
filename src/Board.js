@@ -8,20 +8,32 @@ class Board extends Component {
         return <Block value={blocks[i]} onClick={() => this.props.onClick(i)} />;
     }
     render() {
+
+        const boardStyle = {
+            width: '100%'
+        }
+
+        const radStyle = {
+            float:'left',
+            clear:'both',
+            marginLeft:'40%',
+            minWidth:'320px' 
+        }
+
         return (
 
-            <div className="brett">
-                <div className="rad">
+            <div style={boardStyle}>
+                <div style={radStyle}>
                     {this.drawBlock(0)}
                     {this.drawBlock(1)}
                     {this.drawBlock(2)}
                 </div>
-                <div className="rad">
+                <div style={radStyle}>
                     {this.drawBlock(3)}
                     {this.drawBlock(4)}
                     {this.drawBlock(5)}
                 </div>
-                <div className="rad">
+                <div style={radStyle}>
                     {this.drawBlock(6)}
                     {this.drawBlock(7)}
                     {this.drawBlock(8)}

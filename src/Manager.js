@@ -96,11 +96,14 @@ class Manager extends Component {
     }
 
     render(){
-
+        const overskriftStyle = {
+            font: '1.5em verdana',
+            margin: '2em'
+        }
 
         return(
             <div>
-                <div className="overskrift">{this.state.overskrift}</div>
+                <div style={overskriftStyle}>{this.state.overskrift}</div>
                 <Board
                 blocks={this.state.blocks}
                 onClick={(i) => this.click(i)}

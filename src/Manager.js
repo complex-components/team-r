@@ -50,6 +50,7 @@ class Manager extends React.Component {
             blocks: Array(9).fill(props.nuke),
             trumpTurn: true,
             gameover: false,
+            overskrift:"Dagsaktuell 3 på rad",
         };
     }
 
@@ -83,6 +84,7 @@ class Manager extends React.Component {
             blocks: Array(9).fill(this.props.nuke),
             trumpTurn: true,
             gameover: false,
+            overskrift:"Dagsaktuell 3 på rad",
         });
     }
 
@@ -109,16 +111,19 @@ class Manager extends React.Component {
 
         const winner = this.getwinner(newBoard);
         if(winner !== null){
+
             if (winner === this.props.trump){
                 console.log("trump won");
                 this.setState({
                     gameover: true,
+                    overskrift: "trump won",
+
                 });
             } else if (winner === this.props.kim) {
                 this.setState({
                     gameover: true,
+                    overskrift: "kim won",
                 });
-                console.log("kim won");
             }else {
                 console.log("no winner yet")
             }
@@ -132,8 +137,10 @@ class Manager extends React.Component {
 
     render(){
 
+
         return(
             <div>
+                <div className="overskrift">{this.state.overskrift}</div>
                 <Board
                 blocks={this.state.blocks}
                 onClick={(i) => this.click(i)}

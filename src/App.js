@@ -14,9 +14,18 @@ class App extends Component {
           <h1>Team R!</h1>
         </div>
         <div className="component-test">
-            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
-            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
-            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+            <div className="overskrift">Dagsaktuell 3 på rad</div>
+            <div className="brett">
+                <div className="rad">
+                        <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+                </div>
+                <div className="rad">
+                    <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+                </div>
+                <div className="rad">
+                    <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+                </div>
+            </div>
         </div>
       </div>
     );

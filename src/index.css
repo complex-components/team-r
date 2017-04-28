@@ -16,12 +16,11 @@ body {
 }
 .brett
 {
-    border:.15em black solid;
+    width: 100%;
 }
 .rad
 {
- float:left; clear:both; padding-left: 50em;
-}
+ float:left; clear:both; margin-left: 40%; min-width: 320px;}
 .overskrift
 {
     font: 1.5em verdana; margin : 2em;

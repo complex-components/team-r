@@ -7,13 +7,12 @@ body {
 
 .brikke
 {
-     float: left; padding:0; border: .15em black solid;
+     float: left; padding:0; border: .15em black solid; height: 5em; width: 5em;
 }
 .brikke
 {
     width: 100px;
     height: 100px;
-
 }
 .brett
 {

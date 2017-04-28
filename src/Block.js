@@ -8,7 +8,6 @@ class Block extends Component {
     render() {
         return (
             <div className="brikke">
-                <p>&nbsp;{this.props.value}&nbsp;</p>
                 <img src={this.props.image} />
             </div>
         );

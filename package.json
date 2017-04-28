@@ -1,7 +1,7 @@
 {
-  "name": "team-r",
-  "version": "0.1.0",
-  "private": true,
+  "name": "kim-trump-tic-tac-toe",
+  "version": "0.2.0",
+  "private": false,
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"

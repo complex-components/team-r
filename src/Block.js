@@ -9,6 +9,7 @@ class Block extends Component {
         return (
             <div>
                 <p>&nbsp;{this.props.value}&nbsp;</p>
+                <img src={this.props.image} />
             </div>
         );
     }

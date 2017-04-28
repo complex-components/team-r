@@ -4,7 +4,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
   render() {
+    const t = require('./trump.jpg')
     return (
       <div className="App">
         <div className="App-header">
@@ -12,9 +14,9 @@ class App extends Component {
           <h1>Team R!</h1>
         </div>
         <div className="component-test">
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
-            <Block value="y"/><Block value="y"/><Block value="y"/><br/>
+            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
+            <Block image={t}/><Block image={t}/><Block image={t}/><br/>
         </div>
       </div>
     );

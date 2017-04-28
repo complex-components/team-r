@@ -36,6 +36,15 @@ class Manager extends Component {
         }
     }
 
+    boardFilled(board){
+        for (var i = 0; i < board.size; i++){
+            if (board[i] !== this.props.nuke){
+                return false;
+            }
+        }
+        return true;
+    }
+
     newgame(){
         this.setState({
             blocks: Array(9).fill(this.props.nuke),
@@ -52,6 +61,9 @@ class Manager extends Component {
             return;
         } else {
             if(this.state.blocks[index] !== this.props.nuke){
+                if(this.boardFilled(this.state.blocks) === true){
+                    this.newgame(); return;
+                }
                 return;
             }
         }

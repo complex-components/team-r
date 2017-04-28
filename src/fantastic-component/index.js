@@ -5,7 +5,7 @@ class FantasticComponent extends Component {
   render() {
     return (
       <div className="fantastic-component">
-        <p>Implement stuff here</p>
+        <p>Implement stuff hdj here</p>
       </div>
     );
   }

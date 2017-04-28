@@ -88,13 +88,13 @@ class Manager extends React.Component {
 
     click(i){
 
-
         if(this.state.gameover === true){
             this.newgame();
-        }
-
-        if(this.state.blocks[i] !== this.props.nuke){
             return;
+        } else {
+            if(this.state.blocks[i] !== this.props.nuke){
+                return;
+            }
         }
 
         console.log("clocked:" + i);
